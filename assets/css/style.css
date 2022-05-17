@@ -18,7 +18,7 @@
 
 /* BODY STYLES */
 body {
-    background-color: #dea5a4;
+    background-color: var(--pink);
 }
 
 
@@ -42,12 +42,12 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--gray);
     color: var(--pinkfonts);
-    height: 500px;
+    height: 400px;
     width: 100%;
     margin-bottom: 25px;
     margin-top: 50px;
     background-image: url("../images/header.png");
-    background-size: 650px;
+    background-size: 500px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -55,17 +55,17 @@ body {
 
 /* h1 WITHIN HEADER STYLES */
 .header h1 {
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
-    font-size: 48px;
+    font-size: 36px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
 /* NAVIGATION BAR STYLES */
 .header nav {
-    margin-top: 80px;
+    margin-top: 50px;
     display: flex;
     padding-top: 15px;
     font-size: 20px;
@@ -84,7 +84,7 @@ a {
     color: var(--pinkfonts);
     text-decoration: none;}
 
-a:hover {
+a:hover, a:focus{
     color: var(--pink);
     text-shadow:0px 0px 30px var(--pink);
     -moz-transition: all 0.3s ease-in;
@@ -92,6 +92,131 @@ a:hover {
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
+
+
+/* SELECTORS FOR THE PROJECTS SECTION */
+main {
+    margin-top: 100px;
+    color: var(--pinkfonts);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--pink);
+    margin-left: 100px;
+    margin-right:100px;
+    /* border: 3px solid white; */
+}
+
+aside {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    font-size: 48px;
+    color: var(--pinkfonts);
+  }
+
+
+.sidebar h3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.projects {
+    width: 70%;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+    border-left: 10px solid var(--gray);
+    flex-wrap: wrap;
+}
+
+.maincard {
+    align-self: center;
+    background-color:var(--gray);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    flex: 5 5 0;
+    justify-content: center;
+    max-width: 600px;
+    box-shadow: none;
+}
+
+.maincard:hover, .maincard:focus{
+    box-shadow:0px 0px 50px rgb(56, 56, 124);
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.maincard img {
+    width: 100%;
+}
+
+.maincard p {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    text-align:center;
+    font-size: 48px;
+}
+
+.subcard {
+    margin: 15px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1;
+}
+
+.card {
+    min-width: 250px;
+    max-width: 450px;
+    background-color:var(--gray);
+    margin: .75%;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1;
+    justify-content: center;
+}
+
+.card:hover {
+    box-shadow:0px 0px 50px rgb(56, 56, 124);
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+
+#last-one {
+    flex: 3 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#last-too {
+    flex: 0 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 p {
@@ -254,4 +379,15 @@ p {
         margin-top: 20px;
         margin-left: 0px;
         text-align: center;}
+    
+    .projects {
+    min-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: row;
+    border: 2px solid var(--gray);
+    flex-wrap: wrap;
+}
 }
