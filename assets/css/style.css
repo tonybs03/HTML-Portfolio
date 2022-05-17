@@ -6,171 +6,115 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 /* REPEATED VARIABLES FOR QUICK RECALL */
 :root {
     --pink: #dea5a4;
+    --pinkfonts: #fddddd;
     --gray: #4a4e53;
     --tan: #d8a47f;
-    --border-radius: 50px;
   }
-  
-.header {
-    margin-top: 100px;
-    padding: 20px;
-    background-color: var(--gray);
-    color: white
-    
-}
 
 
+/* BODY STYLES */
 body {
     background-color: #dea5a4;
 }
 
-/* simple paragraph tag */
+
+/* SEACH BAR AT TOP STYLES */
+.topnav {
+    min-height: 5px;
+}
+.topnav input[type=text] {
+    float: right;
+    padding: 3px;
+    border: none;
+    margin-top: 12px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+
+/* HEADER WITH A BACKGROUND IMAGE STYLES */
+.header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--gray);
+    color: var(--pinkfonts);
+    height: 500px;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    background-image: url("../images/header.png");
+    background-size: 650px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* h1 WITHIN HEADER STYLES */
+.header h1 {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* NAVIGATION BAR STYLES */
+.header nav {
+    margin-top: 80px;
+    display: flex;
+    padding-top: 15px;
+    font-size: 20px;
+    justify-content: center;}
+
+.header nav ul {
+    list-style-type: none;
+    margin-left: -50px;
+    align-items: center;}
+
+.header nav ul li {
+    display: inline-block;
+    margin-left: 50px;}
+
+a {
+    color: var(--pinkfonts);
+    text-decoration: none;}
+
+a:hover {
+    color: var(--pink);
+    text-shadow:0px 0px 30px var(--pink);
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+
 p {
     font-size: 16px;
 }
 
 
-
-
-/* defines the styles of heading elements nested inside header class */
-.header h1 {
-    display: inline-block;
-    font-size: 48px;
+.float-left {
+    float: left;
+    margin-right: 25px;
 }
 
-
-/* defines the navigation bar style nested inside the header class*/
-.header nav {
-    padding-top: 15px;
-    margin-right: 20px;
+.float-right {
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
-
-
-/* defines the un-ordered list style inside nav and header class */
-.header nav ul {
-    list-style-type: none;
-}
-
-
-/* allows the list items to appear side by side in the header class */
-.header nav ul li {
-    display: inline-block;
     margin-left: 25px;
 }
 
-
-/* simple element to be used in-line for linked texts */
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-
-/* the following two selectors help me create the same image but
-using the img tag instead of the background image class that was
-defined here before, because we have not been taught about the
-background image class, therefore I decided to use the img tag that 
-we should be familiar with at this point */
-.backgroundimage {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    display: block;
-    overflow: hidden;
-    z-index: -900;
-}
-
-.backgroundimage img {
-    display: block;
-    width: 100%;
-    position: relative;
-    top: -230px;
-    min-height: 825px;
-}
-
-
-/* the following 6 selectors help styling the left side of the page
-(the left column), where the content tag defines the large box, and
-the following class selectors are situated within the content box, 
-and each of the class selectors also contain a heading tag and a
-img tag that allows me to style and positon of these items; I removed
-the float-left or float-right classes (and in HTML as well) since it
-can be directly defined as an argument in the img tags*/
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-    float: left;
-    margin-right: 25px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-    float: right;
-    margin-left: 25px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-    float: left;
-    margin-right: 25px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-
-/* the following 10 selectors are similar to the ones above, except 
-this is for the right column of the page (the skinnier column)  */
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -230,8 +174,60 @@ this is for the right column of the page (the skinnier column)  */
     max-width: 150px;
 }
 
+.search-engine-optimization {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
 
-/* the following final selectors help me define the footer elements*/
+.online-reputation-management {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.social-media-marketing {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.search-engine-optimization img {
+    max-height: 200px;
+}
+
+.online-reputation-management img {
+    max-height: 200px;
+}
+
+.social-media-marketing img {
+    max-height: 200px;
+}
+
+.search-engine-optimization h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.online-reputation-management h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.social-media-marketing h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
 .footer {
     padding: 30px;
     clear: both;
@@ -241,4 +237,21 @@ this is for the right column of the page (the skinnier column)  */
 
 .footer h2 {
     font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .header nav {
+        margin-top: 10px;
+    }
+    .header nav ul {
+        list-style-type: none;
+        margin-left: 0px;
+        align-items: center;}
+    .header nav ul li {
+        display: block;
+        margin-top: 20px;
+        margin-left: 0px;
+        text-align: center;}
 }
